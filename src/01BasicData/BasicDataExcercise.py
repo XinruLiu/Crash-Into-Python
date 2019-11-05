@@ -27,14 +27,12 @@ def my_abs(n):
 # `leap_year(1000)` should equal to `False`
 # `leap_year(2000)` should equal to `True`
 def leap_year(year):
-    if(year % 4 == 0):
-        if (year % 100 == 0):
-            if(year % 400 == 0):
-                return True
-            else:
-                return False
-        else:
-            return True
+    if (year % 400 == 0):
+        return True
+    elif (year % 100 == 0):
+        return False
+    elif (year % 4 == 0):
+        return True
     else:
         return False
 
@@ -47,10 +45,7 @@ def leap_year(year):
 # `xor(True, False)` should equal to `True`
 # `xor(False, False)` should equal to `False`
 def xor(b1, b2):
-    if (b1 and b2) or (not b1 and not b2):
-        return False
-    if (b1 and not b2) or (not b1 and b2):
-        return True
+    return True if b1 != b2 else False
 
 
 # here is what get executed when you run the script
